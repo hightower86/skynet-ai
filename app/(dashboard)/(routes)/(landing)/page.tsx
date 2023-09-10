@@ -3,16 +3,15 @@ import Link from 'next/link';
 
 const LandingPage = () => {
     return (
-        <div>
-            Landing page (Unprotected)
-            <div>
+        <div className="flex  flex-col gap-4">
+            <h1 className="text-4xl">Landing page (Unprotected)</h1>
+            <div className=" p-4 flex gap-2">
                 <Link href="/sign-in">
-                    <Button>Login</Button>
+                    <Button className="bg-lime-700">Login</Button>
                 </Link>
-            </div>
-            <div>
+
                 <Link href="/sign-up">
-                    <Button>Register</Button>
+                    <Button className="bg-indigo-700">Register</Button>
                 </Link>
             </div>
         </div>
