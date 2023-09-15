@@ -44,7 +44,7 @@ export async function POST(req: Request) {
 
         const response = await openai.createImage({
             prompt,
-            n: amount,
+            n: parseInt(amount, 10),
             size: resolution,
         });
 
