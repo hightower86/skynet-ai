@@ -13,8 +13,6 @@ import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Loader } from '@/components/loader';
 import { Empty } from '@/components/ui/empty';
-import { UserAvatar } from '@/components/user-avatar';
-import { BotAvatar } from '@/components/bot-avatar';
 import { useState } from 'react';
 import {
     Select,
