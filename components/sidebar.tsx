@@ -52,7 +52,7 @@ const routes = [
     {
         label: 'Code Generation',
         icon: Code,
-        href: '/coode',
+        href: '/code',
         color: 'text-green-700',
     },
     {
