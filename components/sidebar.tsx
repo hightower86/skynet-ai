@@ -1,4 +1,5 @@
 'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
@@ -14,8 +15,11 @@ import {
     Settings,
     VideoIcon,
 } from 'lucide-react';
+import FreeCounter from '@/components/free-counter';
 
-interface SidebarProps {}
+interface SidebarProps {
+    apiLimitCount: number;
+}
 
 const montserrat = Montserrat({ weight: '600', subsets: ['latin'] });
 const routes = [
@@ -62,9 +66,9 @@ const routes = [
     },
 ];
 
-const Sidebar: FC<SidebarProps> = ({}) => {
+const Sidebar: FC<SidebarProps> = ({ apiLimitCount = 0 }) => {
     const pathname = usePathname();
-
+    console.log({ apiLimitCount });
     return (
         <div className="h-full space-y-4 py-4 flex flex-col bg-[#111827] text-white">
             <div className="px-3 py-2 flex-1">
@@ -105,6 +109,7 @@ const Sidebar: FC<SidebarProps> = ({}) => {
                     ))}
                 </div>
             </div>
+            <FreeCounter apiLimitCount={apiLimitCount} />
         </div>
     );
 };
