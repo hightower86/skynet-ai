@@ -25,7 +25,7 @@ const MobileSidebar: FC<MobileSidebarProps> = ({}) => {
                 </Button>
             </SheetTrigger>
             <SheetContent side="left" className="p-0">
-                <Sidebar />
+                <Sidebar apiLimitCount={0} />
             </SheetContent>
         </Sheet>
     );
